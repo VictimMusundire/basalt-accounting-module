@@ -5,10 +5,7 @@ import com.basalt.basaltaccountingmodule.services.AccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author Victim Musundire
@@ -31,6 +28,13 @@ public class AccountController {
         log.info("This is the request ====> " + accountDto);
         AccountDto savedAccount = accountService.createAccount(accountDto);
         return new ResponseEntity<>(savedAccount, HttpStatus.CREATED);
+    }
+
+    // Get Account by accountNumber REST API
+    @GetMapping("/{accountNumber}")
+    public ResponseEntity<AccountDto> getAccountByNumber(@PathVariable("accountNumber") String accountNumber){
+        AccountDto accountDto = accountService.getAccount(accountNumber);
+        return new ResponseEntity<>(accountDto, HttpStatus.OK);
     }
 
 }

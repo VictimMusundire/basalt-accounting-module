@@ -2,6 +2,7 @@ package com.basalt.basaltaccountingmodule.services.Impl;
 
 import com.basalt.basaltaccountingmodule.dtos.AccountDto;
 import com.basalt.basaltaccountingmodule.exceptions.AccountAlreadyExistsException;
+import com.basalt.basaltaccountingmodule.exceptions.AccountNotFoundException;
 import com.basalt.basaltaccountingmodule.mappers.AutoAccountMapper;
 import com.basalt.basaltaccountingmodule.models.Account;
 import com.basalt.basaltaccountingmodule.repositories.AccountRepository;
@@ -35,9 +36,17 @@ public class AccountServiceImpl implements AccountService {
 
         Account savedAccount = accountRepository.save(account);
 
-        AccountDto savedAccountDto = AutoAccountMapper.MAPPER.mapToAccountDto(savedAccount);
+        return AutoAccountMapper.MAPPER.mapToAccountDto(savedAccount);
 
-        return savedAccountDto;
+    }
 
+    @Override
+    public AccountDto getAccount(String accountNumber) {
+
+        Account account = accountRepository.findByNumber(accountNumber).orElseThrow(
+                () -> new AccountNotFoundException("Account not found")
+        );
+
+        return AutoAccountMapper.MAPPER.mapToAccountDto(account);
     }
 }

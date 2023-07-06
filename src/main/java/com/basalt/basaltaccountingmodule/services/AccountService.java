@@ -7,4 +7,5 @@ import com.basalt.basaltaccountingmodule.dtos.AccountDto;
  */
 public interface AccountService {
     AccountDto createAccount(AccountDto accountDto);
+    AccountDto getAccount(String accountNumber);
 }
