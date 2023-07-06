@@ -1,6 +1,6 @@
-package com.basalt.basaltaccountingmodule.controller;
+package com.basalt.basaltaccountingmodule.controllers;
 
-import com.basalt.basaltaccountingmodule.dto.AccountDto;
+import com.basalt.basaltaccountingmodule.dtos.AccountDto;
 import com.basalt.basaltaccountingmodule.utils.enums.AccountType;
 import com.basalt.basaltaccountingmodule.utils.enums.Currency;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.time.OffsetDateTime;
 import java.util.UUID;
+
+/**
+ * @author Victim Musundire
+ */
 
 @RestController
 @RequestMapping("/accounts")

@@ -1,4 +1,4 @@
-package com.basalt.basaltaccountingmodule.model;
+package com.basalt.basaltaccountingmodule.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -9,6 +9,9 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.io.Serializable;
 import java.time.OffsetDateTime;
 import java.util.UUID;
+/**
+ * @author Victim Musundire
+ */
 
 @Data
 @MappedSuperclass

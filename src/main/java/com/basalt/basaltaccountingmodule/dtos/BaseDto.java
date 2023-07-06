@@ -1,4 +1,4 @@
-package com.basalt.basaltaccountingmodule.dto;
+package com.basalt.basaltaccountingmodule.dtos;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -8,6 +8,9 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.time.OffsetDateTime;
+/**
+ * @author Victim Musundire
+ */
 
 @Data
 @SuperBuilder

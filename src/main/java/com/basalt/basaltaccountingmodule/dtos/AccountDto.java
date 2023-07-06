@@ -1,10 +1,12 @@
-package com.basalt.basaltaccountingmodule.dto;
+package com.basalt.basaltaccountingmodule.dtos;
 
 import com.basalt.basaltaccountingmodule.utils.enums.AccountType;
 import com.basalt.basaltaccountingmodule.utils.enums.Currency;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-
+/**
+ * @author Victim Musundire
+ */
 @Data
 @SuperBuilder
 @NoArgsConstructor
