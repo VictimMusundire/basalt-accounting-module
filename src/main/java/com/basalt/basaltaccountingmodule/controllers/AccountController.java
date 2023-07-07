@@ -22,7 +22,7 @@ public class AccountController {
         this.accountService = accountService;
     }
 
-    // Create Account REST API
+    // Account creation REST API
     @PostMapping("/create")
     public ResponseEntity<AccountDto> createUser(@RequestBody AccountDto accountDto){
         log.info("This is the request ====> " + accountDto);
@@ -31,6 +31,7 @@ public class AccountController {
     }
 
     // Get Account by accountNumber REST API
+    // TODO: 7/7/2023 On scaling, to communicate. 
     @GetMapping("/{accountNumber}")
     public ResponseEntity<AccountDto> getAccountByNumber(@PathVariable("accountNumber") String accountNumber){
         AccountDto accountDto = accountService.getAccount(accountNumber);

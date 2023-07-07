@@ -1,4 +1,4 @@
-package com.basalt.basaltaccountingmodule.utils.enums;
+package com.basalt.basaltaccountingmodule.enums;
 /**
  * @author Victim Musundire
  */

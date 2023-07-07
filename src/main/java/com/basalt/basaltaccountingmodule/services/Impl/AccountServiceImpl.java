@@ -26,6 +26,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public AccountDto createAccount(AccountDto accountDto) {
+
         Optional<Account> optionalAccount = accountRepository.findByNumber(accountDto.getNumber());
 
         if(optionalAccount.isPresent()){

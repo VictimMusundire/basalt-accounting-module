@@ -1,6 +1,6 @@
 package com.basalt.basaltaccountingmodule.models;
 
-import com.basalt.basaltaccountingmodule.utils.enums.AccountType;
+import com.basalt.basaltaccountingmodule.enums.AccountType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -9,7 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import com.basalt.basaltaccountingmodule.utils.enums.Currency;
+import com.basalt.basaltaccountingmodule.enums.Currency;
 /**
  * @author Victim Musundire
  */

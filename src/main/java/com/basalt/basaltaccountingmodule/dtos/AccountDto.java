@@ -1,7 +1,7 @@
 package com.basalt.basaltaccountingmodule.dtos;
 
-import com.basalt.basaltaccountingmodule.utils.enums.AccountType;
-import com.basalt.basaltaccountingmodule.utils.enums.Currency;
+import com.basalt.basaltaccountingmodule.enums.AccountType;
+import com.basalt.basaltaccountingmodule.enums.Currency;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 /**
